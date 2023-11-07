@@ -1,0 +1,11 @@
+Height and width are essential for every html element that defines area of an element which prevent cummulative shift.
+
+height can be specified on the following values px, pt, em, vw, vh, cm, %, auto, inherit .
+
+Block level element default height:  Element content area or  text height .
+
+Block level element default width : Takes full screen, window  width 
+
+Inline level element default height :  Element content area or text height .
+
+Inline level element default width : Takes content width grows along with content as element content grows .
