@@ -2,6 +2,13 @@ Height and width are essential for every html element that defines area of an el
 
 height can be specified on the following values px, pt, em, vw, vh, cm, %, auto, inherit .
 
+height in % : element doesnot grow to defined %  wrt on window height this is because element height is height of content area in block level element 
+, use position fixed to grow and fix element 
+
+height in px etc : element grow to defined height a vertical scroll bar added
+
+width in % and px : element grow to defined width this is because element width is entire viewport width in  block level element.
+
 Block level element default height:  Element content area or  text height .
 
 Block level element default width : Takes full screen, window  width 
