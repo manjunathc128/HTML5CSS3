@@ -1,0 +1,38 @@
+<style>
+#span1{
+  border:2px solid;
+  margin:10px;
+  padding:20px;
+  /* height and width doesnt have any effect */
+  height:200px;
+  width:50%;
+  
+}
+#span2{
+  border:2px solid;
+  margin:10px;
+  padding:20px;
+  display:inline-block;
+  height:200px;
+  width:50%; 
+}
+
+.inlineblock{
+  display:inline-block;
+}
+
+</style>
+<span id="span1">  Inline element </span>
+<span id="span2">  Inline element </span>
+
+<p> This is paragraph 1 </p>
+<p>this is paragraph 2 </p>
+
+the below two paragraph displays in same line and no line 
+break are added with display:inline-block
+<br>
+
+<p class="inlineblock"> This is paragraph 1 </p>
+<p class="inlineblock">this is paragraph 2 </p>
+<br>
+example create navigation link using inline-block on ul or ol li tags.
