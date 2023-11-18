@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .absolute{
+            box-sizing: content-box;
+            width:1cm;
+            width: 1mm;
+            width:1in;
+            width:1px;
+            width:1pt;
+            width: 1pc;
+            border: 1px solid hotpink; 
+        }
+        .parent{
+            width: 100%;
+            border: 1px solid;
+            margin-top:30px;
+        }
+        .relative{
+            
+            border: 2px solid;
+            width:50%; /*wrt parent unit*/
+
+
+            font-size: 36px;
+            width:4em; /* wrt font size of current element */
+
+            width:10rem; /* wrt font size of current root html element */
+
+            width: 100vw; /* wrt viewport browser window size in % change screen size to see effect*/
+
+            width: 10vh; 
+
+            width: 100vmin; /* wrt min max height or width of viewport in % change screen size to see effect*/
+            width: 100vmax;
+
+        }
+  </style>
+</head>
+    <body>
+        <p>Units can be  defined in two ways length and named units </p>
+
+    <h2>absolute units</h2>
+
+    <div class="absolute">
+        some content
+    </div>
+    <div class="parent">
+        <div class="relative">
+            some content 
+        </div>
+    </div>
+    
+</body>
+</html>
