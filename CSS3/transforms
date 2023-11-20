@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:70%;
+        }
+        div{
+            padding:30px;
+            background-color: #333;
+            width:2em;
+            color:white;
+            font-weight: bolder;
+            font-size: 50px;
+            margin: 30px;
+              
+        }
+
+        .rotateX{
+            transform: rotateX(240deg) ;  
+        }
+        .rotateY{
+            transform: rotateY(290deg);
+        }
+        .rotateZ{
+            transform: rotateZ(60deg);
+            
+        }
+        .translateX{
+            transform: translateX(200px);
+        }
+        .translateY{
+            transform: translateY(90px); 
+        }
+        .translateZ{
+            transform: translateZ(110px);
+        }
+
+        .scaleX{
+            transform: scaleX(1.3);
+
+        }
+        .scaleY{
+            transform: scaleY(0.3);
+        }
+        .scaleZ{
+            transform: scaleZ(0.1);
+        }
+
+        .skewX{
+            transform: skewX(50%);
+            transform: skewY(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="  rotateX">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <div class="  rotateY">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <h3>Three 3D rotation rotateZ</h3>
+
+    <div class="rotateZ">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <br>
+    <div class="translateX">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <br>
+    <div class="translateY">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <br><br><br><br><br>
+
+    <div class="translateZ">
+        ----&gt;
+        div
+        &lt;---
+    </div>
+    <div class="scaleX">
+        div
+    </div>
+
+    <div class="scaleY">
+        div
+    </div>
+    <div class="scaleZ">
+        div
+    </div>
+    <div class="skewX">div</div>
+</body>
+</html>
