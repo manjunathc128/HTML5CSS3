@@ -1,0 +1,44 @@
+<style>
+div[style]{
+  background-color:pink !important;
+}
+
+div[style^="border"]{
+  background-color: blue !important;
+  color:white;
+}
+p[class~="para"]{
+  margin-top:15px;
+  border:1px solid #ddd;
+  background-color: #d1d1d1;
+}
+p[style|="background"]{
+  color:white;
+  background-color:#111 !important;
+}
+
+p[style$="111"]{
+  background-color: purple !important;
+  color:white;
+  height:120px;
+}
+
+p[style*="-"]{
+  border-radius:50%;
+}
+</style>  
+<div style="background-color:red" >
+  Attribute selector
+</div>
+
+<br>
+
+<div style="border:1px solid;">
+ Attribute selector with specified value 
+</div>
+
+  <p class="para para1 para2"> paragraph shows attribute selector with ~ to select attribute with specified value as one the list of space seperated list of value  </p>  
+<p style="background-color:#eee"> attribute selector with value as exactly as sepecified value followed by -
+</p>
+<p style="background-color:#111" > attribute selector with value that ends with specified value
+</p>
