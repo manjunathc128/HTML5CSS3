@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation{
+            width: 200px;
+            background-color: blue;
+            text-align: center;
+            color:hotpink;
+            font-family: Helvetica; 
+            font-size: 20px;
+            font-weight:bolder;
+            padding: 30px 5px;
+            animation-name: firstanimation;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            /* whithout animation-iteration-count animation will apply one time */
+            /* animation-iteration-count:3; */
+            animation-direction:alternate-reverse;
+            animation-fill-mode: both;
+
+        }
+        @keyframes firstanimation{
+            from {background-color: #333;color:#f1f1f1;}
+            to {background-color: #f1f1f1; width:400px;color:#333; transform: rotateZ(200deg); }
+
+        }
+
+
+        .square{
+            box-sizing: border-box;
+            height:250px;
+            width: 250px;
+            padding: 100px 0 0;
+            text-align: center;
+            background-color: yellow;   
+            font-size: 30px;
+            font-family:Helvetica;
+            animation-name: ball;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            animation-timing-function:ease-in;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            content:"ball";
+        }
+    
+        span::before{
+            content: "paser";
+        }
+        
+        @keyframes ball{
+            from {
+                border-radius:5%; background-color: white;
+                content: "paser";
+            }
+            to {
+                border-radius: 100%; transform:rotateY(300deg); background-color: pink;
+                span:after{
+                    content: " ball";
+                }
+            }
+        }
+
+        
+    </style>
+
+</head>
+<body style="background-color: hotpink;">
+    <div class="animation">
+        div
+    </div>
+    <br><br><br><br><br><br>
+
+    <div class="square">
+        <span></span>
+    </div>
+
+    <div class="image-container">
+
+        
+    </div>
+
+
+</body>
+</html>
