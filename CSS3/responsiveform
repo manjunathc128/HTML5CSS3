@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./responsiveform.css">
+</head>
+<style>
+* {
+    box-sizing: border-box;
+  }
+.container{
+    border:1px solid pink;
+    padding:20px;
+    background-color: #ddd;
+    border-radius: 10px;;
+}
+.row{
+    padding:10px;
+    width: 100%;
+    
+}
+
+.row::after{
+    content: "";
+    display:table;
+    clear:both;
+}
+
+.label{
+    width:25%;
+    /* border:1px solid; */
+    float: left;
+}
+
+.field{
+    /* padding: 12px; */
+    float: left;
+    width:75%;
+    /* border:1px solid; */
+    
+}
+
+label{
+    padding: 12px;
+    display: inline-block;
+}
+
+input[type=text], textarea, select{
+    width:100%;
+    resize: vertical;
+    
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+     
+}
+
+@media  screen and  (max-width:660px){
+    .label, .field{
+        width:100%;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="label">
+                    <label for="">FirstName</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="" id="">
+                </div>    
+            
+            </div>
+    
+            <div  class="row">
+                <div class="label">
+                    <label for="">LastName</label>
+                </div>
+                
+                <div class="field">
+                    <input type="text" name="" id="">
+                </div> 
+            </div>
+    
+            <div  class="row">
+                <div class="label">
+                    <label for="">Country</label>
+                </div>
+                <div class="field">
+                    <select name="" id="">
+                        <op></op>
+                        <op></op>
+                        <op></op>
+                    </select>
+                </div>
+            
+            </div>
+    
+            <div  class="row">
+                <div class="label">
+                    <label for="">WriteHere</label>
+                </div>
+
+                <div class="field">
+                    <textarea name="" id="" cols="1" rows="1"></textarea>
+                </div>
+            
+            </div>
+    </div>
+        
+    </form>
+</body>
+</html>
