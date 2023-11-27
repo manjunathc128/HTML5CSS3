@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 5px solid #111;
+  float: left;
+  width: 180px; /* define width of container where item/image need to be fit*/
+  height:180px; /* define height of container where item/image need to be fit*/
+  
+  overflow:auto; /* when item/content here image is floated or not is longer than its container height or width it overflows . To prevent overflow                    and push content/image inside container use oveflow clearfix hack*/
+  
+}		
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%; /* when set to item irrespective of width of the item here image, it adjust the width of item to 100% of its parent which helps fit item inside its container*/ 
+  
+  /* height: auto; */ /* helps browser to calculate the height of item/image w r t width of the item/image which is just following 100% width of its parent if not specified image will either overflow fits or lies inside based on height of image wrt height of container*/
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+</html>
