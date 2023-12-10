@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    nav {
+      /* background-color: rgb(255, 0, 0); */
+      display: flex;
+      justify-content: end;
+      font-size: 1.5rem;
+      padding: 0.5em;
+      border-radius: 0.4em;
+    }
+    .hidden {
+      /* display: none; */
+      visibility: hidden;
+    }
+    body {
+      /* background-image: linear-gradient(to  left, rgb(123,13,1) 0%,  rgb(122, 77, 77) 100% ); */
+      text-align: center;
+      font-size: x-large;
+      /* padding-top: 100px; */
+      /* line-height:100vh ; */
+      height: 100vh;
+      color: #000;
+      font-size: 2rem;
+      background-color: white;
+    }
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .toggle-theme {
+      display: flex;
+      justify-content: space-between;
+      width: 4rem;
+      font-size: 1.1rem;
+      border: 0.2em solid hotpink;
+      border-radius: 1.2em;
+      padding: 0.1em 0.2em;
+    }
+  </style>
+  <body>
+    <nav>
+      <div class="toggle-theme">
+        <svg
+          class="btn-toggle-mode1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 1)"
+        >
+          <path
+            d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+          ></path>
+        </svg>
+
+        <svg
+          class="btn-toggle-mode2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgba(255, 255, 255, 1)"
+        >
+          <path
+            d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+          ></path>
+        </svg>
+      </div>
+    </nav>
+    Behind the scences of javascript
+    <!-- <script src='./scopes.js'></script> -->
+<script src="./scopes.js">
+
+//selectors  
+let btnToggleDark = document.querySelector(".btn-toggle-mode1");
+let btnToggleLight = document.querySelector(".btn-toggle-mode2");
+let themeContainer = document.querySelector(".toggle-theme");
+let navigationBar = document.getElementsByTagName('nav')
+// console.log(btnToggle);
+
+let theme = localStorage.getItem("theme");
+console.log(theme, typeof theme);
+
+if (theme) {
+  document.body.classList.add(theme);
+  btnToggleDark.classList.add("hidden");
+} else {
+  document.body.classList.remove(theme);
+  btnToggleLight.classList.add("hidden");
+
+}
+
+// btnToggle.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (document.body.classList.contains("dark-mode")) {
+//     document.body.classList.remove("dark-mode");
+//     btnToggle.classList.add("hidden");
+//     localStorage.removeItem("theme");
+//   } else {
+//     document.body.classList.add("dark-mode");
+//     localStorage.setItem("theme", "dark-mode");
+//   }
+// });
+
+
+btnToggleLight.addEventListener("click", (e) => {
+  e.preventDefault();
+//   if (theme) {
+    document.body.classList.remove("dark-mode");
+    btnToggleLight.classList.add("hidden");
+    btnToggleDark.classList.remove("hidden");
+    localStorage.removeItem("theme");
+    
+//   }
+});
+
+btnToggleDark.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  document.body.classList.add("dark-mode");
+  btnToggleDark.classList.add("hidden");
+  btnToggleLight.classList.remove("hidden");
+  localStorage.setItem("theme", "dark-mode");
+  
+});
+
+console.log(themeContainer)
+      
+    </script>
+  </body>
+</html>
