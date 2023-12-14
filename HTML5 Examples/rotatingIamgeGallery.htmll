@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./rotate.css">
+     <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img{
+    height: 200px;
+    width: 320px;
+    position: absolute;
+   
+}
+.box{
+    position: relative;
+    margin-top: 20%;
+    margin-left: 40%;
+    height: 200px;
+    width: 320px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* animation: rotate 30s linear infinite; */
+    transform: rotateX(-10deg) rotateY(-10deg);
+}
+
+.images{
+    position: absolute;
+    
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+img:nth-child(1){
+    transform: rotateY(90deg) translateZ(300px)  ;
+    animation: rotateimage-1 15s linear infinite;
+}
+img:nth-child(2){
+    transform: rotateY(180deg) translateZ(300px) ;
+    animation: rotateimage-2 15s linear infinite;
+}
+img:nth-child(3){
+    transform: rotateY(240deg) translateZ(300px) ;
+    animation: rotateimage-3 15s linear infinite;
+}
+img:nth-child(4){
+    transform: rotateY(360deg) translateZ(300px) ;
+    animation: rotateimage-4 15s linear infinite;
+}
+
+@keyframes rotate {
+    to{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    from{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+@keyframes rotateimage-1{
+    
+    
+}
+@keyframes rotateimage-2{
+    
+}
+@keyframes rotateimage-3{
+    
+}
+@keyframes rotateimage-4{
+    
+}
+     </style>
+  </head>
+
+  <body>
+    <div class="box">
+        <div class="images">
+            <img src="images/img1.jpg" alt=""><img src="./images/img2.jpg" alt=""><img src="./images/img3.JPG" alt=""><img src="./images/img4.jpg" alt="">
+        </div>
+    </div>
+  </body>
+</html>
