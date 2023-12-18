@@ -1,0 +1,89 @@
+<style>
+  
+.container-body{
+  display:flex;
+  min-width:200px;
+  height:200px;
+  
+  background-color:rgba(12,37,12,0.9);
+  justify-content:center; 
+  align-items:center;
+  gap:2rem;
+}
+span{
+  color:#fff;
+/*   align-self:flex-start; */
+/*   justify-self:flex-end; */
+}
+.display-container{
+    align-self:flex-start; 
+    justify-self:end;
+    border:0.2rem solid  ;
+    padding:0.2rem 0.5rem;
+    cursor:pointer;
+}
+.container-box{
+/*   display:inline; */
+  mix-width: 30%;
+  background-color:white;
+  border: 0.3rem solid hotpink ;
+  content:"This is container";
+  padding:1.3rem 5rem;
+  position: absolute;
+/*   z-index:1; */
+/*   opacity:1; */
+  justify-self:center;
+  align-self:center; 
+}
+.hidden{
+  display:none;
+}
+.overlay{
+  opacity:0.8;
+}
+</style>
+
+<div class="container-body ">
+  
+  <div class="display-container"> 
+    <span>Click Me</span> 
+  </div>
+  
+  <div class="container-box hidden"></div>
+  
+</div>
+<script>
+
+const overlay = document.querySelector('.container-body');
+const displayBtn = document.querySelector('.display-container');
+const container = document.querySelector('.container-box');
+
+displayBtn.addEventListener('click',(event) => {
+  if (container.classList.contains('hidden')){
+    container.classList.remove('hidden');
+    overlay.classList.add('overlay');
+  }
+  else{
+    container.classList.add('hidden');
+    overlay.classList.remove('overlay');
+  }
+});
+
+// overlay.addEventListener('click', (event) => {
+//   if ( !(container.classList.contains('hidden')) && overlay.classList.contains('overlay') ){
+//       container.classList.add('hidden');
+//       overlay.classList.remove('overlay');
+//       }else{
+//         container.classList.remove('hidden');
+//         overlay.classList.add('overlay');
+//       }
+// });
+ 
+document.addEventListener('keydown',(event) => { if(event.key === 'Escape' && overlay.classList.contains('overlay') && !container.classList.contains('hidden') ){
+  container.classList.add('hidden');
+  overlay.classList.remove('overlay');
+}
+});
+  
+</script>
+  
