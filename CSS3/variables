@@ -1,0 +1,52 @@
+<style>
+ *{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+:root{
+ --color: red; 
+ --seccolor:#ddd; 
+ --primary-color:#123456;
+ --secondary-color:#a345a6; 
+ --text-color:#678645; 
+ --manjunath: red;
+}
+
+body{
+    background-color: var(--manjunath)           /* manjunath as a variable name */
+} 
+
+.navbar{
+  display:flex;
+  flex-direction:row; /*default*/
+  --color:#f9f9f9 ;
+  background-color:var(--color);
+  color: var(--seccolor);
+  background-color: var(--secondary-color);
+  border:5px solid var(--text-color); 
+  padding:20px;
+  margin:10px;
+}
+
+.navbar a{
+  text-decoration:none;
+}
+
+.navbar-item a{
+  padding:10px 15px;
+/*   border:1px solid; */
+  margin: 10px;
+  color: var(--seccolor);
+} 
+  <style>
+
+
+
+<nav class="navbar">
+  <div class="navbar-item"><a href="" target="_blank">Home</a></div>
+  <div class="navbar-item"> <a href="" target="_blank"> About </a></div> 
+  <div class="navbar-item"><a href="" target="_blank">Gallery</a></div> 
+  <div class="navbar-item"><a href="" target="_blank">profile</a></div> 
+</nav>  
+ <h2>This is multi-color website created with the help of variables  </h2>
