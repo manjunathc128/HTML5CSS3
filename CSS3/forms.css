@@ -1,0 +1,32 @@
+<style>
+ input[type="text"]{
+            display:block;
+            width:80%;
+            /* height:20vw; */
+            padding-left: 30px;
+            margin-top:10px;
+            background-image:url('./favicon.ico') ;
+            background-repeat: no-repeat;
+            /* background-position: center center ; */
+            /* background-position: 20px 20px ;  specify two values first horizontal seconde vertical */
+            background-size:contain;
+            border:none;
+            border-bottom:1px solid red;
+            border-radius:5px;
+            font-size:20px;
+        }
+        input[type="text"]:focus{
+            background-color:#123456;
+            outline:none;
+            color:white;
+            font-family:Arial;  
+            font-weight:bolder;
+            /* font-size:1vw; */
+        }
+</style>
+
+<form>
+  <lable for="firstname" name="fn">FirstName *</lable>
+  <input type="text" id="firstname" name="fn" value="Manjunath"> 
+  
+</form>
